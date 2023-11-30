@@ -24,7 +24,7 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'mars-images.imgix.net',
         port: '',
-        pathname: '/seobot/devhunt.org/**'
+        pathname: '/seobot/opencollab.exchange/**'
       }
     ]
   }

@@ -10,7 +10,7 @@ export async function generateMetadata({ params: { slug } }: { params: { slug: s
 
   return {
     title: `Best ${getOriginalSlug()} Tools`,
-    metadataBase: new URL('https://devhunt.org'),
+    metadataBase: new URL('https://opencollab.exchange'),
     alternates: {
       canonical: `/tools/${slug}`,
     },

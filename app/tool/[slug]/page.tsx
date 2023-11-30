@@ -41,7 +41,7 @@ export async function generateMetadata({ params: { slug } }: { params: { slug: s
   return {
     title: `${tool?.name} - ${tool?.slogan}`,
     description: tool?.slogan,
-    metadataBase: new URL('https://devhunt.org'),
+    metadataBase: new URL('https://opencollab.exchange'),
     alternates: {
       canonical: `/tool/${slug}`,
     },
@@ -50,7 +50,7 @@ export async function generateMetadata({ params: { slug } }: { params: { slug: s
       title: `${tool?.name} - ${tool?.slogan}`,
       description: tool?.slogan ?? '',
       images: tool?.asset_urls ?? [],
-      url: `https://devhunt.org/tool/${slug}`,
+      url: `https://opencollab.exchange/tool/${slug}`,
     },
     twitter: {
       title: `${tool?.name} - ${tool?.slogan}`,

@@ -4,7 +4,7 @@ import { createBrowserClient } from '@/utils/supabase/browser';
 import ProfileService from '@/utils/supabase/services/profile';
 import categories from '@/utils/categories';
 
-const URL = 'https://devhunt.org';
+const URL = 'https://opencollab.exchange';
 
 async function generateSiteMap() {
   const productsService = new ProductsService(createBrowserClient());
@@ -20,7 +20,7 @@ async function generateSiteMap() {
       <loc>${URL}/the-story</loc>
     </url>
     <url>
-      <loc>https://devhunt.org/blog</loc>
+      <loc>https://opencollab.exchange/blog</loc>
     </url>
      ${
        tools &&

@@ -7,7 +7,7 @@ import { createBrowserClient } from '@/utils/supabase/browser';
 const { title, description, ogImage } = {
   title: 'Dev Hunt – The best new Dev Tools every day.',
   description: 'A launchpad for dev tools, built by developers for developers, open source, and fair.',
-  ogImage: 'https://devhunt.org/devhuntog.png?v=2',
+  ogImage: 'https://opencollab.exchange/devhuntog.png?v=2',
 };
 
 export const metadata = {
@@ -17,7 +17,7 @@ export const metadata = {
     title,
     description,
     images: [ogImage],
-    url: 'https://devhunt.org',
+    url: 'https://opencollab.exchange',
   },
   twitter: {
     card: 'summary_large_image',

@@ -24,7 +24,7 @@ export async function generateMetadata({ params: { slug } }: { params: { slug: s
   return {
     title,
     description,
-    metadataBase: new URL('https://devhunt.org'),
+    metadataBase: new URL('https://opencollab.exchange'),
     alternates: {
       canonical: `/blog/${slug}`,
     },
@@ -33,7 +33,7 @@ export async function generateMetadata({ params: { slug } }: { params: { slug: s
       title,
       description,
       images: [post.image],
-      url: `https://devhunt.org/blog/${slug}`,
+      url: `https://opencollab.exchange/blog/${slug}`,
     },
     twitter: {
       title,
@@ -75,7 +75,7 @@ export default async function Article({ params: { slug } }: { params: { slug: st
         {post.readingTime ? <span>{` ⦁ ${post.readingTime}`} min read</span> : null}
       </div>
       {
-        post.image?.includes('devhunt.org')
+        post.image?.includes('opencollab.exchange')
           ? (
         <div className="relative flex justify-center items-center w-full aspect-video mt-2 text-center rounded-xl overflow-hidden">
           <Image src={post.image} alt={post.headline} layout="fill" objectFit="cover" />

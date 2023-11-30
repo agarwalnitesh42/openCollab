@@ -9,7 +9,7 @@ export default () => {
       name: 'About',
     },
     {
-      href: 'https://github.com/MarsX-dev/devhunt',
+      href: 'https://github.com/agarwalnitesh42/opencollab',
       name: 'GitHub Repository',
     },
     {
@@ -17,7 +17,7 @@ export default () => {
       name: 'Blog',
     },
     {
-      href: 'https://twitter.com/johnrushx',
+      href: 'https://twitter.com/exp_nit',
       name: 'Contact',
     },
     { name: 'OSS Friends', href: '/oss-friends' },
@@ -33,12 +33,8 @@ export default () => {
   ];
 
   const builtBy = [
-    { title: '@johnrushx', url: 'https://twitter.com/johnrushx' },
-    { title: '@sidi_jeddou_dev', url: 'https://twitter.com/sidi_jeddou_dev' },
-    { title: '@vitalik_may', url: 'https://twitter.com/vitalik_may' },
-    { title: '@BotanMan', url: 'https://twitter.com/BotanMan' },
-    { title: '@chris_byrne', url: 'https://twitter.com/chris_byrne' },
-    { title: 'see all', url: '/the-story' },
+    { title: '@exp_nit', url: 'https://twitter.com/exp_nit' },
+    { title: 'See more', url: '/the-story' },
   ];
 
   return (
@@ -61,11 +57,7 @@ export default () => {
         </ul>
         <div className="mt-8 items-center justify-between sm:flex">
           <div className="mt-4 sm:mt-0">
-            &copy; 2023 Dev Hunt. Member of{' '}
-            <a className=" text-slate-100 hover:text-slate-50" href="https://www.marsx.dev/">
-              MarsX.Dev
-            </a>{' '}
-            family. <br />
+            &copy; 2023 Open Collab.<br />
             <div className="text-xs pt-2">
               Uses{' '}
               {usedTools.map((t, i) => (
@@ -100,7 +92,7 @@ export default () => {
           <div className="mt-6 sm:mt-0">
             <ul className="flex items-center space-x-4">
               <li>
-                <a href="https://twitter.com/devhunt_">
+                <a href="https://twitter.com/exp_nit">
                   <svg className="svg-icon w-6 h-6 text-slate-500 hover:text-slate-300" viewBox="0 0 20 20">
                     <path
                       fill="none"

@@ -37,7 +37,7 @@ export async function generateMetadata({ params: { user } }: { params: { user: s
   return {
     title: `${profile?.full_name}'s profile on Dev Hunt - Dev Hunt`,
     description: `Discover the tools that ${profile?.full_name}, is passionate about on Dev Hunt`,
-    metadataBase: new URL('https://devhunt.org'),
+    metadataBase: new URL('https://opencollab.exchange'),
     alternates: {
       canonical: `${decodeURIComponent(user)}`,
     },
@@ -46,7 +46,7 @@ export async function generateMetadata({ params: { user } }: { params: { user: s
       title: `${profile?.full_name}'s profile on Dev Hunt - Dev Hunt`,
       description: `Discover the tools that ${profile?.full_name}, is passionate about on Dev Hunt`,
       images: [(profile?.avatar_url as string) || ''],
-      url: `https://devhunt.org/${decodeURIComponent(user)}`,
+      url: `https://opencollab.exchange/${decodeURIComponent(user)}`,
     },
     twitter: {
       title: `${profile?.full_name}'s profile on Dev Hunt - Dev Hunt`,

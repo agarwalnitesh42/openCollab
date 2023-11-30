@@ -315,7 +315,7 @@ export default () => {
               <ul className="text-sm text-slate-300">
                 <li className="p-2 rounded-lg border border-slate-800 bg-slate-800/50">
                   The launch date is <b>{moment(getValues('launch_date')).format('LL')}</b> Please{' '}
-                  <a href="https://twitter.com/johnrushx" target="_blank" className="text-orange-500 hover:text-orange-400">
+                  <a href="https://twitter.com/exp_nit" target="_blank" className="text-orange-500 hover:text-orange-400">
                     contact us
                   </a>{' '}
                   if you want to update or cancel the launch.

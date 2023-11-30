@@ -28,20 +28,20 @@ declare global {
 }
 
 const { title, description, ogImage } = {
-  title: 'Dev Hunt – The best new Dev Tools every day.',
-  description: 'A launchpad for dev tools, built by developers for developers, open source, and fair.',
-  ogImage: 'https://devhunt.org/devhuntog.png?v=2',
+  title: 'OpenCollab – Global Tech Exchange.',
+  description: 'Tech Exchange Tool, built by developers for developers, open source, and fair.',
+  ogImage: 'https://opencollab.exchange/devhuntog.png?v=2',
 };
 
 export const metadata = {
   title,
   description,
-  metadataBase: new URL('https://devhunt.org'),
+  metadataBase: new URL('https://opencollab.exchange'),
   openGraph: {
     title,
     description,
     images: [ogImage],
-    url: 'https://devhunt.org',
+    url: 'https://opencollab.exchange',
   },
   twitter: {
     card: 'summary_large_image',

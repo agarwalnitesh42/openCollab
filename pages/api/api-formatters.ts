@@ -10,7 +10,7 @@ export function simpleToolApiDtoFormatter(t: ExtendedProduct) {
     data_added: new Date(t.created_at).toISOString().split('T')[0],
     launch_date: t.launch_date,
     votes_count: t.votes_count || '-',
-    devhunt_link: `https://devhunt.org/tool/${t.slug}`,
+    devhunt_link: `https://opencollab.exchange/tool/${t.slug}`,
     link: t.demo_url,
   };
 }

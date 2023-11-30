@@ -41,9 +41,9 @@ function prepareSuccessDto(input: string, tools: ExtendedProduct[]): ChatGtpDto 
         data_added: new Date(t.created_at).toISOString().split('T')[0],
         developer: t.profiles.full_name,
         upvotes: t.votes_count || '-',
-        upvote_link: `https://devhunt.org/tool/${t.slug}`
+        upvote_link: `https://opencollab.exchange/tool/${t.slug}`
       })),
-      footer: 'Discover your next tool https://devhunt.org/ ![DevHunt](https://ucarecdn.com/e59542d4-3ede-4f62-855e-b668cdbaef02/)'
+      footer: 'Discover your next tool https://opencollab.exchange/ ![DevHunt](https://ucarecdn.com/e59542d4-3ede-4f62-855e-b668cdbaef02/)'
     }
   };
 }

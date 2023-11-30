@@ -18,10 +18,10 @@ function deslugify(str: string) {
 }
 
 export async function generateMetadata({ params: { slug } }: { params: { slug: string } }): Promise<Metadata> {
-  const title = `${deslugify(slug)} - DevHunt Blog`;
+  const title = `${deslugify(slug)} - OpenCollab Blog`;
   return {
     title,
-    metadataBase: new URL('https://devhunt.org'),
+    metadataBase: new URL('https://opencollab.exchange'),
     alternates: {
       canonical: `/blog/category/${slug}`,
     },
@@ -30,7 +30,7 @@ export async function generateMetadata({ params: { slug } }: { params: { slug: s
       title,
       // description: '',
       // images: [],
-      url: `https://devhunt.org/blog/category/${slug}`,
+      url: `https://opencollab.exchange/blog/category/${slug}`,
     },
     twitter: {
       title,
