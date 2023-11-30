@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* Customize scrollbar */
+*::-webkit-scrollbar {
+  @apply w-2.5 h-2.5 bg-slate-900 duration-150;
+}
+
+*::-webkit-scrollbar:hover {
+  @apply bg-slate-800;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply bg-slate-700 rounded-full;
+}
+
+.custom-screen {
+  @apply max-w-screen-xl mx-auto px-4 md:px-8;
+}
+
+.container-custom-screen {
+  @apply max-w-3xl mx-auto px-4 md:px-8;
+}
+
+ul > li:last-child:last-of-type .comment-divided-bar {
+  display: none;
+}
+
+.btnshake {
+  animation: shake 0.82s 3 cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+  animation-delay: 1s;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.animate-bottom-bannner {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-10%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
