@@ -10,7 +10,7 @@ type OSSFriend = {
   description: string;
 };
 
-const title = 'OSS Friends - Dev Hunt';
+const title = 'OSS Friends - Open Collab';
 
 export const metadata = {
   title,

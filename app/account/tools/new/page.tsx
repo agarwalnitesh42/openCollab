@@ -129,6 +129,7 @@ export default () => {
     else return true;
   };
 
+  // Not Useful for us as of now
   const validateToolName = async () => {
     const tool = await productService.getBySlug(createSlug(getValues('tool_name')));
     if (tool?.slug) {
@@ -138,7 +139,8 @@ export default () => {
   };
 
   const onSubmit: SubmitHandler<Inputs> = async data => {
-    if (validateImages() && (await validateToolName())) {
+        // if (validateImages() && (await validateToolName())) {
+    if (validateImages()) {
       const { tool_name, tool_website, tool_description, slogan, pricing_type, github_repo, demo_video, week } = data;
       const categoryIds = categories.map(item => item.id);
       setLaunching(true);
@@ -318,7 +320,7 @@ export default () => {
             </div>
           </FormLaunchSection>
 
-          <FormLaunchSection
+          {/* <FormLaunchSection
             number={4}
             title="Launch Week for Your Dev Tool"
             description="Setting the perfect launch week is essential to make a splash in the dev world."
@@ -353,7 +355,7 @@ export default () => {
               </Button>
               <p className="text-sm text-slate-500 mt-2">* no worries, you can change it later</p>
             </div>
-          </FormLaunchSection>
+          </FormLaunchSection> */}
         </FormLaunchWrapper>
       </div>
     </section>

@@ -1,8 +1,10 @@
 import mergeTW from '@/utils/mergeTW';
+import Image from 'next/image';
+import openCollabMainLogo from '@/public/openCollabMainLogo.png';
 
-export default ({ className = '', w = '124', h = '35' }: { className?: string; w?: string; h?: string }) => (
+export default ({ className = '', w = 124, h = 35 }: { className?: string; w?: number; h?: number }) => (
   <div>
-    <svg width={w} height={h} className={mergeTW(`${className}`)} viewBox="0 0 851 107" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* <svg width={w} height={h} className={mergeTW(`${className}`)} viewBox="0 0 851 107" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         fill-rule="evenodd"
         clip-rule="evenodd"
@@ -43,6 +45,7 @@ export default ({ className = '', w = '124', h = '35' }: { className?: string; w
         fill="white"
       />
       <rect x="788" y="89.2937" width="62" height="16" fill="#FF7516" />
-    </svg>
+    </svg> */}
+    <Image src={openCollabMainLogo} width={w} height={h} alt=''/>
   </div>
 );
