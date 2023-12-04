@@ -7,7 +7,7 @@ import LinkShiny from '@/components/ui/LinkShiny';
 import ProductLogo from '@/components/ui/ToolCard/Tool.Logo';
 import { Stat, StatsWrapper, StatCountItem, StatItem } from '@/components/ui/Stats';
 import { Tabs } from '@/components/ui/TabsLink';
-import TabLink from '@/components/ui/TabsLink/TabLink';
+import {TabsLink} from '@/components/ui/TabsLink/TabLink';
 import { Tag, TagsGroup } from '@/components/ui/TagsGroup';
 import Title from '@/components/ui/ToolCard/Tool.Title';
 import CommentService, { ProductComment } from '@/utils/supabase/services/comments';
@@ -149,9 +149,9 @@ export default ({ href, tool, close }: { href: string; tool: ProductType; close:
         </div>
         <Tabs ulClassName="container-custom-screen" className="mt-20 sticky pt-2 top-0 z-10 bg-slate-900">
           {tabs.map((item, idx) => (
-            <TabLink variant="nonlink" sectionId={item.sectionId} key={idx}>
+            <TabsLink variant="nonlink" sectionId={item.sectionId} key={idx}>
               {item.name}
-            </TabLink>
+            </TabsLink>
           ))}
         </Tabs>
         <div className="space-y-20">
