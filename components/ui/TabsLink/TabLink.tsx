@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import React, { ReactNode, useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { inView, scroll } from 'framer-motion/dom';
 
 interface Props {
   children: ReactNode;
@@ -14,11 +13,12 @@ interface Props {
   linkClassName?: string;
   isActive?: boolean;
   variant?: 'nonlink' | 'link';
+  type?: string;
+  handleTabChange?: (tabName?: string) => void;
 }
 
-export const TabsLink = ({ children, hash, href, sectionId, className = '', linkClassName, isActive, variant = 'link', ...props }: Props) => {
+export const TabsLink = ({ children, hash, href, sectionId, className = '', linkClassName, isActive, variant = 'link', type, handleTabChange,  ...props }: Props) => {
   const [isLinkActive, setLinkActive] = useState(isActive);
-  const [selectedSection, setSelectedSection] = useState('');
   const pathname = usePathname();
 
   const customClassName = `inline-block rounded-full py-2 px-3 target:bg-slate-800 hover:bg-slate-800 duration-150 ${linkClassName}`;
@@ -52,7 +52,6 @@ export const TabsLink = ({ children, hash, href, sectionId, className = '', link
       window.addEventListener('hashchange', handlehashUpdate);
     } else {
       handlePathUpdate();
-      // window.addEventListener('hashchange', handlePathUpdate)
     }
   }, [pathname]);
 
@@ -61,23 +60,9 @@ export const TabsLink = ({ children, hash, href, sectionId, className = '', link
     sectionEl?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  useEffect(() => {
-    // document.querySelectorAll('*').forEach(element => {
-    //   element.addEventListener('scroll', function (e) {
-    //     const el = e.target as HTMLElement;
-    //     const sectionEl = document.getElementById(sectionId as string);
-    //     const rect = sectionEl?.getBoundingClientRect();
-    //     const modalRec = document.querySelector('.view-modal')?.getBoundingClientRect();
-    //     // console.log('offsetTop', sectionEl?.offsetTop);
-    //     // console.log('rect', rect);
-    //     console.log('scrollTop', el.scrollTop);
-    //     setLinkActive(false);
-    //     if (sectionEl && el.scrollTop > sectionEl?.offsetTop) {
-    //       setLinkActive(true);
-    //     }
-    //   });
-    // });
-  }, []);
+  const handleTabClick = () => {
+    handleTabChange?.(hash);
+  };
 
   return (
     <li
@@ -96,7 +81,7 @@ export const TabsLink = ({ children, hash, href, sectionId, className = '', link
           </a>
         )
       ) : (
-        <button onClick={scrollToSection} {...props} className={customClassName}>
+        <button onClick={type === 'componentChange' ? handleTabClick: scrollToSection} {...props} className={customClassName}>
           {children}
         </button>
       )}

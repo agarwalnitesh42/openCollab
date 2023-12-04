@@ -13,6 +13,7 @@
     "fetch:types": "npx supabase gen types typescript --schema public --project-id=\"xpdhqqwgprlqmqaqmnyx\" > utils/supabase/types.ts && npm run format:better-supabase-types"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "@radix-ui/react-navigation-menu": "^1.1.3",
     "@radix-ui/react-popover": "^1.0.7",
@@ -34,12 +35,14 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.44.2",
-    "sass": "^1.69.5",
+    "react-range-slider-input": "^3.0.7",
+    "react-select": "^5.8.0",
     "seobot": "^1.0.6",
     "tailwind-merge": "^1.12.0",
     "waypoints": "^4.0.1"
   },
   "devDependencies": {
+    "@babel/runtime": "^7.23.5",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.9",
     "@types/dompurify": "^3.0.2",
@@ -61,6 +64,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "postcss": "8.4.23",
     "prettier": "^2.8.8",
+    "sass": "^1.69.5",
     "supabase": "^1.63.1",
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4"

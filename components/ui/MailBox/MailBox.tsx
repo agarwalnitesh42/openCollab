@@ -60,7 +60,7 @@ const Mailbox: React.FC<MailboxProps> = ({ emails }) => {
   const currentEmail = emails.find((email) => email.id === selectedEmailId);
 
   return (
-    <div className='flex'>
+    <div className='flex mailbox-container'>
       <Sidebar
         emails={emails}
         setSidebarSection={(section) => setSidebarSection(section)}

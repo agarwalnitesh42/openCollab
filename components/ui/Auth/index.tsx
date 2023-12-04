@@ -4,7 +4,6 @@ import React, { type FormEventHandler, useState } from 'react';
 import LabelError from '@/components/ui/LabelError/LabelError';
 import Input from '@/components/ui/Input';
 import Label from '@/components/ui/Label/Label';
-import { Tag, TagsGroup } from '@/components/ui/TagsGroup';
 import { Tabs, TabsLink } from '@/components/ui/TabsLink';
 import { useSupabase } from '@/components/supabase/provider';
 import { useCallback, useEffect } from 'react';
@@ -30,6 +29,7 @@ export default function Auth({ onLogout }: { onLogout?: () => void }) {
   const [password, setPassword] = useState('');
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
+  const [activeTab, setActiveTab] = useState<string | undefined>('#signIn');
   const [isLoad, setLoad] = useState(false);
 
   const router = useRouter();
@@ -49,7 +49,6 @@ export default function Auth({ onLogout }: { onLogout?: () => void }) {
   const handleGitHubLogin = async () => {
     setGithubAuthLoad(true);
     const { error } = await supabase.auth.signInWithOAuth({ provider: 'github' });
-
     if (error != null) {
       console.log({ error });
     }
@@ -113,10 +112,30 @@ export default function Auth({ onLogout }: { onLogout?: () => void }) {
     }
   };
 
+  const renderTabs = () => (
+    <Tabs className="sticky z-10 ">
+      <TabsLink 
+        type={'componentChange'} 
+        hash={'#signIn'} 
+        key={'s1'} 
+        variant='nonlink'
+        handleTabChange={setActiveTab}>
+        Sign In
+      </TabsLink>
+      <TabsLink 
+        type={'componentChange'} 
+        hash={'#signUp'} 
+        key={'s2'} 
+        variant='nonlink'
+        handleTabChange={setActiveTab}>
+        Sign Up
+      </TabsLink>
+    </Tabs>
+  );
+
   // this `session` is from the root loader - server-side
   // therefore, it can safely be used to conditionally render
   // SSR pages without issues with hydration
-
   return Boolean(session) ? (
     <div className="hidden md:block">
       <AvatarMenu session={session} onLogout={onLogout} />
@@ -127,20 +146,9 @@ export default function Auth({ onLogout }: { onLogout?: () => void }) {
         Sign In
       </Button>
       <Modal variant="custom" isActive={isModalActive} onCancel={() => setModalActive(false)} className="max-w-md">
-        {/** Branding */}
         <Brand w={130} h={40} className="mx-auto" />
-        <Tabs className="sticky z-10 ">
-          <TabsLink hash={'#signIn'} key={'s1'}>
-            Sign In
-          </TabsLink>
-          <TabsLink hash={'#signU['} key={'s2'}>
-            Sign Up
-          </TabsLink>
-        </Tabs>
-       
-        {/** -------- */}
-
-        {/** Sign In Form */}
+        {renderTabs()}
+        {activeTab === '#signIn' ? (
         <div className='text-center max-w-xl mt-2' id="signIn">
           <form onSubmit={handleSubmit} className="mt-4">
             <div className='text-start'>
@@ -170,7 +178,7 @@ export default function Auth({ onLogout }: { onLogout?: () => void }) {
             </Button>
           </form>
         </div>
-
+        ): (
         <div className='text-center max-w-xl mt-2' id="signUp">
           <form onSubmit={handleSubmit} className="mt-4">
             <div className='text-start'>
@@ -211,28 +219,33 @@ export default function Auth({ onLogout }: { onLogout?: () => void }) {
             </Button>
           </form>
         </div>
-        {/** --------- */}
+        )}
 
-        {/** Border */}
-        <div className="flex mt-4">
-          <div className="flex-1">
-            <hr/>
-          </div>
-          <div className="text-muted justify-center pt-1 px-3">
-            or
-          </div>
-          <div className="flex-1">
-            <hr/>
-          </div>
-        </div>
-        {/** ------ */}
-
-        {/** Social Logins */}
-        <div className="text-center">
-          <GithubProvider isLoad={isGithubAuthLoad} onClick={handleGitHubLogin} className="w-full justify-center mt-4" />
-          <GoogleProvider isLoad={isGoogleAuthLoad} onClick={handleGoogleLogin} className="w-full justify-center mt-2" />
-        </div>
       </Modal>
     </div>
+  );
+
+  const socialLogin = () => (
+    <>
+      {/** Border */}
+      <div className="flex mt-4">
+        <div className="flex-1">
+          <hr/>
+        </div>
+        <div className="text-muted justify-center pt-1 px-3">
+          or
+        </div>
+        <div className="flex-1">
+          <hr/>
+        </div>
+      </div>
+      {/** ------ */}
+
+      {/** Social Logins */}
+      <div className="text-center">
+        <GithubProvider isLoad={isGithubAuthLoad} onClick={handleGitHubLogin} className="w-full justify-center mt-4" />
+        <GoogleProvider isLoad={isGoogleAuthLoad} onClick={handleGoogleLogin} className="w-full justify-center mt-2" />
+      </div>
+    </>
   );
 }

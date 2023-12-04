@@ -20,7 +20,7 @@ const EmailDetails: React.FC<EmailDetailsProps> = ({ email, onDelete }) => {
 	
 	const getDeleteButton = () => {
 		if (email.tag !== 'deleted') {
-			return <span onClick={() => { onDelete(email.id); }} className="delete-btn fa fa-trash-o"></span>;
+			return <span onClick={() => { onDelete(email.id); }} className="delete-btn fa fa-trash-o"> Delete </span>;
 		}
 		return undefined;
 	}

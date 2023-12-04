@@ -19,8 +19,7 @@ export default () => {
     {
       href: 'https://twitter.com/exp_nit',
       name: 'Contact',
-    },
-    { name: 'OSS Friends', href: '/oss-friends' },
+    }
   ];
 
   const usedTools = [
@@ -59,16 +58,6 @@ export default () => {
           <div className="mt-4 sm:mt-0">
             &copy; 2023 Open Collab.<br />
             <div className="text-xs pt-2">
-              Uses{' '}
-              {usedTools.map((t, i) => (
-                <a className=" text-slate-200 hover:text-slate-50" href={t.url} rel="nofollow noopener noreferrer" target="_blank">
-                  {t.title}
-                  {usedTools.length - 1 === i ? '' : ', '}
-                </a>
-              ))}
-              {'.'}
-            </div>
-            <div className="text-xs pt-2">
               Built by{' '}
               {builtBy.map((t, i) => (
                 <a className=" text-slate-200 hover:text-slate-50" href={t.url} rel="nofollow noopener noreferrer" target="_blank">
@@ -78,16 +67,7 @@ export default () => {
               ))}
               {'.'}
             </div>
-            <div className="text-xs pt-2">
-              <a href="https://devhunt.openstatus.dev/">Status page</a>
-            </div>
-            <a href="https://usermaven.com/?utm_source=badge" className="mt-5 block" rel="nofollow">
-              <img
-                className="w-32"
-                src="https://usermaven.com/img/badge-dark.png"
-                alt="Usermaven | Website analytics and product insights"
-              />
-            </a>
+           
           </div>
           <div className="mt-6 sm:mt-0">
             <ul className="flex items-center space-x-4">
