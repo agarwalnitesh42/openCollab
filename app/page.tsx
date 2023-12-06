@@ -939,8 +939,8 @@ export default function Home() {
 
   return (
     <section className="max-w-4xl mt-5 lg:mt-10 mx-auto px-4 md:px-8">
-      {/* <MailBox emails={emails}/> */}
-      <TechFinder />
+      <MailBox emails={emails}/>
+      {/* <TechFinder /> */}
       {isLoading ? (
         <div className="mt-14">
           <div>
