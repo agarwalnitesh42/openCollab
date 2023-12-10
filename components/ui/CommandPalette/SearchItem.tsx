@@ -13,7 +13,7 @@ export default ({ item, ...props }: { item: Product; onClick: () => void }) => (
     <ProductLogo src={item.logo_url} imgClassName="w-7 h-7" />
 
     <div className="text-sm">
-      <ProductName className="text-slate-200">{item.name}</ProductName>
+      <ProductName className="text-black">{item.name}</ProductName>
       <ProductTitle className="mt-1 line-clamp-1 sm:text-sm">{item.slogan}</ProductTitle>
     </div>
   </Link>

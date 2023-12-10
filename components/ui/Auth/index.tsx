@@ -158,7 +158,7 @@ export default function Auth({ onLogout }: { onLogout?: () => void }) {
                 onChange={e => {
                   setEmail((e.target as HTMLInputElement).value);
                 }}
-                className="w-full mt-2 bg-slate-600"
+                className="w-full mt-2 bg-white"
               />
               <LabelError className="mt">{emailError}</LabelError>
             </div>
@@ -169,7 +169,7 @@ export default function Auth({ onLogout }: { onLogout?: () => void }) {
                 onChange={e => {
                   setPassword((e.target as HTMLInputElement).value);
                 }}
-                className="w-full mt-2 bg-slate-600"
+                className="w-full mt-2 bg-white"
               />
               <LabelError className="mt">{passwordError}</LabelError>
             </div>
@@ -188,7 +188,7 @@ export default function Auth({ onLogout }: { onLogout?: () => void }) {
                 onChange={e => {
                   setEmail((e.target as HTMLInputElement).value);
                 }}
-                className="w-full mt-2 bg-slate-600"
+                className="w-full mt-2 bg-white"
               />
               <LabelError className="mt">{emailError}</LabelError>
             </div>
@@ -199,7 +199,7 @@ export default function Auth({ onLogout }: { onLogout?: () => void }) {
                 onChange={e => {
                   setPassword((e.target as HTMLInputElement).value);
                 }}
-                className="w-full mt-2 bg-slate-600"
+                className="w-full mt-2 bg-white"
               />
               <LabelError className="mt">{passwordError}</LabelError>
             </div>
@@ -210,7 +210,7 @@ export default function Auth({ onLogout }: { onLogout?: () => void }) {
                 onChange={e => {
                   setPassword((e.target as HTMLInputElement).value);
                 }}
-                className="w-full mt-2 bg-slate-600"
+                className="w-full mt-2 bg-white"
               />
               <LabelError className="mt">{passwordError}</LabelError>
             </div>

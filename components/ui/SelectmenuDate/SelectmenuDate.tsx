@@ -25,7 +25,7 @@ export default ({ label, value, className = '', date: { month = new Date().getMo
         {...props}
         {...validate}
         value={value}
-        className={`pr-3 pl-12 py-2 appearance-none rounded-lg text-sm bg-slate-800 text-slate-300 outline-none ${mergeTW(className)}`}
+        className={`pr-3 pl-12 py-2 appearance-none rounded-lg text-sm bg-slate-800 text-black outline-none ${mergeTW(className)}`}
       >
         <option value="" disabled selected>
           {label}

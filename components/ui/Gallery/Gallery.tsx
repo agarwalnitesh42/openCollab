@@ -55,7 +55,7 @@ export const Gallery = ({
         <div>
           <div className="fixed z-40 inset-0 px-4 flex items-center justify-center w-full h-full zoom">
             <ButtonHandler
-              className="absolute z-20 top-4 bg-white text-slate-800 right-4 my-auto md:right-8"
+              className="absolute z-20 top-4 bg-white text-black right-4 my-auto md:right-8"
               onClick={() => {
                 setZoomActive(false);
               }}
@@ -98,7 +98,7 @@ export const Gallery = ({
                     className="flex-none w-14 h-10 hover:scale-110 duration-200"
                   >
                     {(idx === 0 && media[idx].includes('youtube')) || media[idx].includes('youtu.be') || media[idx].includes('.mp4') ? (
-                      <div className="w-full h-full bg-orange-600 rounded-lg text-white flex items-center justify-center">
+                      <div className="w-full h-full bg-orange-600 rounded-lg text-black flex items-center justify-center">
                         <IconPlay />
                       </div>
                     ) : (

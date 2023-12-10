@@ -110,13 +110,13 @@ export default ({ href, tool, close }: { href: string; tool: ProductType; close:
         onCancel={close}
         variant="custom"
         classNameContainer="px-0 py-0 sm:py-8"
-        className="max-w-4xl bg-slate-900 px-0 py-8 view-modal"
+        className="max-w-4xl bg-white px-0 py-8 view-modal"
       >
         <div>
           <div className="container-custom-screen pt-4 pb-10">
             <button
               onClick={() => router.back()}
-              className="flex items-center gap-x-2 py-2 px-4 text-slate-50 border border-slate-700 rounded-lg hover:bg-slate-800 duration-150"
+              className="flex items-center gap-x-2 py-2 px-4 text-black border border-slate-700 rounded-lg hover:bg-slate-800 duration-150"
             >
               <IconArrowLongLeft />
               Go back
@@ -127,7 +127,7 @@ export default ({ href, tool, close }: { href: string; tool: ProductType; close:
               <ProductLogo src={tool?.logo_url} alt={tool?.slogan as string} />
               <WinnerBadge weekRank={weekRank} isLaunchEnd={isLaunchEnd} />
             </div>
-            <h1 className="mt-3 text-slate-100 font-medium">{tool?.name}</h1>
+            <h1 className="mt-3 text-black font-medium">{tool?.name}</h1>
             <Title className="mt-1">{tool?.slogan}</Title>
             <div className="text-sm mt-3 flex items-center gap-x-3">
               <LinkShiny
@@ -147,7 +147,7 @@ export default ({ href, tool, close }: { href: string; tool: ProductType; close:
             </div>
           </div>
         </div>
-        <Tabs ulClassName="container-custom-screen" className="mt-20 sticky pt-2 top-0 z-10 bg-slate-900">
+        <Tabs ulClassName="container-custom-screen" className="mt-20 sticky pt-2 top-0 z-10 bg-white">
           {tabs.map((item, idx) => (
             <TabsLink variant="nonlink" sectionId={item.sectionId} key={idx}>
               {item.name}
@@ -160,13 +160,13 @@ export default ({ href, tool, close }: { href: string; tool: ProductType; close:
               <div className="absolute top-0 w-full h-[100px] opacity-40 bg-[linear-gradient(180deg,_rgba(124,_58,_237,_0.06)_0%,_rgba(72,_58,_237,_0)_100%)]"></div>
               <div className="relative container-custom-screen mt-12">
                 <div
-                  className="prose text-slate-100 whitespace-pre-wrap"
+                  className="prose text-black whitespace-pre-wrap"
                   // Use DOMPurify method for XSS sanitizeration
                   dangerouslySetInnerHTML={{ __html: tool?.description as string }}
                 ></div>
                 {tool?.product_categories?.length ? (
                   <div className="mt-6 flex flex-wrap gap-3 items-center">
-                    <h3 className="text-sm text-slate-400 font-medium">Classified in</h3>
+                    <h3 className="text-sm text-black font-medium">Classified in</h3>
                     <TagsGroup>
                       {tool?.product_categories.map((pc: { name: string }) => (
                         <Tag href={`/tools/${pc.name.toLowerCase().replaceAll(' ', '-')}`}>{pc.name}</Tag>
@@ -192,8 +192,8 @@ export default ({ href, tool, close }: { href: string; tool: ProductType; close:
           <CommentSection productId={tool?.owner_id as string} comments={comments as any} slug={tool?.slug} />
           {/* Keep doing based on Product interface */}
           <div className="container-custom-screen" id="details">
-            <h3 className="text-slate-50 font-medium">About this launch</h3>
-            <p className="text-slate-300 mt-6">
+            <h3 className="text-black font-medium">About this launch</h3>
+            <p className="text-black mt-6">
               {tool?.name} {isLaunchStarted ? 'was hunted by' : 'by'}{' '}
               <Link href={`/@${owner?.username}`} className="text-orange-500 hover:text-orange-400 duration-150">
                 {owner?.full_name}
@@ -218,7 +218,7 @@ export default ({ href, tool, close }: { href: string; tool: ProductType; close:
             ) : null}
           </div>
           <div className="container-custom-screen" id="launches">
-            <h3 className="text-slate-50 font-medium">Trending launches</h3>
+            <h3 className="text-black font-medium">Trending launches</h3>
             <TrendingToolsList />
           </div>
         </div>

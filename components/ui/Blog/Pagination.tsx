@@ -6,7 +6,7 @@ interface PaginationProps {
 
 const Pagination: React.FC<PaginationProps> = ({ slug, pageNumber, lastPage }) => {
   return (
-    <div className="flex mt-12 items-center justify-center text-sm text-slate-300">
+    <div className="flex mt-12 items-center justify-center text-sm text-black">
       <a
         className={`bg-slate-800 hover:bg-slate-700 duration-200 rounded-md px-2 py-1 w-[90px] text-center ${
           pageNumber ? '' : 'pointer-events-none opacity-50'

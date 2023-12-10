@@ -66,7 +66,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const profile = user ? await profileService.getById(user?.id) : null;
 
   return (
-    <html lang="en" className="bg-slate-900">
+    <html lang="en" className="bg-white">
       <head>
         {process.env.USER_MAVEN_KEY && (
           <>

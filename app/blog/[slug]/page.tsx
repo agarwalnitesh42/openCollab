@@ -56,18 +56,18 @@ export default async function Article({ params: { slug } }: { params: { slug: st
           <a className="text-orange-500 hover:text-orange-400 duration-200" href="/">
             Home
           </a>
-          <ChevronRightIcon className="w-4 h-4 text-slate-500" />
+          <ChevronRightIcon className="w-4 h-4 text-black0" />
           <Link className="text-orange-500 hover:text-orange-400 duration-200" href="/blog/">
             Blog
           </Link>
-          <ChevronRightIcon className="w-4 h-4 text-slate-500" />
+          <ChevronRightIcon className="w-4 h-4 text-black0" />
           <Link className="text-orange-500 hover:text-orange-400 duration-200" href={`/blog/category/${post.category.slug}`}>
             {post.category.title}
           </Link>
         </div>
           )
         : null}
-      <div className="mt-2 flex flex-wrap gap-2 items-center w-full text-sm text-slate-400">
+      <div className="mt-2 flex flex-wrap gap-2 items-center w-full text-sm text-black">
         <span>
           Published{' '}
           {new Date(post.publishedAt || post.createdAt).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' })}
@@ -92,7 +92,7 @@ export default async function Article({ params: { slug } }: { params: { slug: st
           <a
             key={ix}
             href={`/blog/tag/${t.slug}`}
-            className="bg-slate-800 hover:bg-slate-700 px-2 py-1 rounded text-xs text-slate-400 font-semibold"
+            className="bg-slate-800 hover:bg-slate-700 px-2 py-1 rounded text-xs text-black font-semibold"
           >
             {t.title}
           </a>

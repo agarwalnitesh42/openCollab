@@ -1,7 +1,7 @@
 export default ({ isActive, setActive }: { isActive: boolean; setActive: () => void }) => (
   <button
     aria-label="Menu button"
-    className="p-1.5 text-slate-400 hover:text-slate-200 hover:bg-slate-800 active:bg-slate-700 rounded-md duration-150"
+    className="p-1.5 text-black hover:text-black hover:bg-slate-800 active:bg-slate-700 rounded-md duration-150"
     onClick={setActive}
   >
     {isActive ? (

@@ -888,8 +888,8 @@ export default function Home() {
         productService.getWeeklyWinners(week),
       ]);
       setLaunchWeeks(launchWeeks as any);
-      // setWeeklyWinners(weeklyWinners as any);
-      setWeeklyWinners(products);
+      setWeeklyWinners(weeklyWinners as any);
+    //   setWeeklyWinners(products);
       setLoading(false);
     };
     fetchData();
@@ -898,8 +898,8 @@ export default function Home() {
   function weekTools(group) {
     return (
       <>
-        <div className="mt-3 text-slate-400 text-sm">This week's tools</div>
-        <div className="mt-3 text-slate-400 text-sm">
+        <div className="mt-3 text-black text-sm">This week's tools</div>
+        <div className="mt-3 text-black text-sm">
           ❗ Vote for your favorite <b className="text-orange-400">↳</b>
         </div>
         <ul className="mt-3 divide-y divide-slate-800/60">
@@ -914,7 +914,7 @@ export default function Home() {
   function prevWeekTools(group) {
     return (
       <>
-        <div className="mt-3 text-white text-sm">Previous week winners 👑</div>
+        <div className="mt-3 text-black text-sm">Previous week winners 👑</div>
         <ul className="mt-3 divide-y divide-slate-800/60">
           {group.products.slice(0, 3).map((product, idx) => (
             <ToolCardEffect key={idx} tool={product as ProductType} />
@@ -927,7 +927,7 @@ export default function Home() {
   function weekWinnerTools(products) {
     return (
       <>
-        <div className="mt-3 text-white text-sm">Previous weeks winners 👑</div>
+        <div className="mt-3 text-black text-sm">Previous weeks winners 👑</div>
         <ul className="mt-3 divide-y divide-slate-800/60">
           {products.map((product, idx) => (
             <ToolCardEffect key={idx} tool={product as ProductType} />
@@ -938,9 +938,9 @@ export default function Home() {
   }
 
   return (
-    <section className="max-w-4xl mt-5 lg:mt-10 mx-auto px-4 md:px-8">
-      <MailBox emails={emails}/>
-      {/* <TechFinder /> */}
+    <section className="max-w-6xl mt-5 lg:mt-10 mx-auto px-4 md:px-8">
+      {/* <MailBox emails={emails}/> */}
+      <TechFinder />
       {isLoading ? (
         <div className="mt-14">
           <div>

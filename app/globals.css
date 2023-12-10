@@ -8,7 +8,7 @@
 
 /* Customize scrollbar */
 *::-webkit-scrollbar {
-  @apply w-2.5 h-2.5 bg-slate-900 duration-150;
+  @apply w-2.5 h-2.5 bg-white duration-150;
 }
 
 *::-webkit-scrollbar:hover {

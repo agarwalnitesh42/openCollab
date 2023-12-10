@@ -121,7 +121,7 @@ export default ({ count, productId, className = '', launchDate = '', launchEnd =
         </LinkItem>
         <Button
           onClick={() => setModalActive(false)}
-          className="flex-1 block w-full text-sm border border-slate-700 bg-transparent hover:bg-slate-900 mt-2 sm:mt-0"
+          className="flex-1 block w-full text-sm border border-slate-700 bg-transparent hover:bg-white mt-2 sm:mt-0"
         >
           Continue
         </Button>

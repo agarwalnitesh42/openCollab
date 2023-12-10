@@ -46,15 +46,15 @@ export default ({ isActive, closeModal }: { isActive: boolean; closeModal: (val:
         <div className="absolute w-full -top-16"></div>
         <form onSubmit={handleSubmit} className="relative">
           <IconNewsletterEnvolpe />
-          <h3 className="text-slate-50 font-semibold mt-6">Subscribe to OpenCollab</h3>
-          <p className="text-slate-300 mt-2">Get weekly email with best new dev tools</p>
+          <h3 className="text-black font-semibold mt-6">Subscribe to OpenCollab</h3>
+          <p className="text-black mt-2">Get weekly email with best new dev tools</p>
           {!isSubscribingDone ? (
             <Input
               required
               autoFocus
               placeholder="Enter your email"
               onChange={e => setPersonalEMail((e.target as HTMLInputElement).value)}
-              className="w-full mt-6 border-slate-700 bg-slate-900/70 hover:bg-slate-900/40 focus:bg-slate-900/40"
+              className="w-full mt-6 border-slate-700 bg-white hover:bg-white focus:bg-white"
             />
           ) : (
             ''

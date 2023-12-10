@@ -46,14 +46,14 @@ export default (props: Props) => {
       >
         <IconClipboard />
         {copyState ? (
-          <div className="absolute -top-12 -left-3 px-2 py-1.5 rounded-xl bg-orange-600 font-semibold text-white text-[10px] after:absolute after:inset-x-0 after:mx-auto after:top-[22px] after:w-2 after:h-2 after:bg-orange-600 after:rotate-45">
+          <div className="absolute -top-12 -left-3 px-2 py-1.5 rounded-xl bg-orange-600 font-semibold text-black text-[10px] after:absolute after:inset-x-0 after:mx-auto after:top-[22px] after:w-2 after:h-2 after:bg-orange-600 after:rotate-45">
             Copied
           </div>
         ) : (
           ''
         )}
       </button>
-      <pre className="bg-slate-900">
+      <pre className="bg-white">
         <code className="lang-jsx">{children}</code>
       </pre>
     </div>

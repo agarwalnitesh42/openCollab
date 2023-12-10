@@ -94,8 +94,8 @@ export default ({
 
   return (
     <Modal variant="custom" isActive={isModalOpen} className="max-w-4xl">
-      <h3 className="text-slate-50 font-medium">Add banner</h3>
-      <p className="text-slate-300 text-sm mt-2">
+      <h3 className="text-black font-medium">Add banner</h3>
+      <p className="text-black text-sm mt-2">
         Add this code between <b>{'<head>'}</b> tags in your website to show a banner about your launch.
       </p>
       <div className="mt-3">

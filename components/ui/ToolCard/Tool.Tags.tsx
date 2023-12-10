@@ -1,5 +1,5 @@
 export default ({ items }: { items: any[] }) => (
-  <div className="flex items-center gap-x-3 text-sm text-slate-400 overflow-hidden">
+  <div className="flex items-center gap-x-3 text-sm text-black overflow-hidden">
     {items.slice(0, 3).map((item, idx) => (
       <>
         <span className="flex-none">{item}</span>

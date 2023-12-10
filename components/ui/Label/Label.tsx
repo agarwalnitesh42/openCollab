@@ -8,7 +8,7 @@ interface Props extends HTMLAttributes<HTMLLabelElement> {
 }
 
 export default ({ children, className, ...props }: Props) => (
-  <label {...props} className={mergeTW(`text-sm text-slate-400 font-medium ${className}`)}>
+  <label {...props} className={mergeTW(`text-sm text-black font-medium ${className}`)}>
     {children}
   </label>
 )

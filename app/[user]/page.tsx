@@ -74,7 +74,7 @@ export default async ({ params: { user } }: { params: { user: string } }) => {
         <UserProfileInfo profile={profile} />
         {tools && tools?.length > 0 ? (
           <div>
-            <h3 className="font-medium text-slate-50">Launches</h3>
+            <h3 className="font-medium text-black">Launches</h3>
             <ul className="mt-3 divide-y divide-slate-800/60">
               {tools.map((tool, idx) => (
                 <ToolCardList key={idx} tool={tool as ITool} />
@@ -86,7 +86,7 @@ export default async ({ params: { user } }: { params: { user: string } }) => {
         )}
         {votedTools && votedTools?.length > 0 ? (
           <div>
-            <h3 className="font-medium text-slate-50">{votedTools?.length} Upvotes</h3>
+            <h3 className="font-medium text-black">{votedTools?.length} Upvotes</h3>
             <ul className="mt-3 divide-y divide-slate-800/60">
               {votedTools.map((tool: any, idx: number) => (
                 <li key={idx} className="py-3">
@@ -121,7 +121,7 @@ export default async ({ params: { user } }: { params: { user: string } }) => {
         )}
         {activity && activity?.length > 0 ? (
           <div>
-            <h3 className="font-medium text-slate-50">Activity</h3>
+            <h3 className="font-medium text-black">Activity</h3>
             <Comments className="mt-8">
               {(activity as IComment[]).map((item: IComment, idx) => (
                 <Comment key={idx} className="gap-4 sm:gap-6">
@@ -130,7 +130,7 @@ export default async ({ params: { user } }: { params: { user: string } }) => {
                     <Link href={`/tool/${item.products.slug}/#${item.id}`} className="flex-1">
                       <CommentUserName>{item.profiles.full_name}</CommentUserName>
                       <CommentDate className="mt-1">Commented {moment(item.created_at).format('LL')}</CommentDate>
-                      <CommentContext className="mt-3 text-slate-400 line-clamp-2">{item.content}</CommentContext>
+                      <CommentContext className="mt-3 text-black line-clamp-2">{item.content}</CommentContext>
                     </Link>
                     <ToolCardLink className="mt-3 border border-slate-800 px-2 sm:px-4" href={'/tool/' + item.products.slug}>
                       <Logo src={item.products.logo_url || ''} alt={item.products.name} imgClassName="w-12 h-12" />
@@ -157,7 +157,7 @@ export default async ({ params: { user } }: { params: { user: string } }) => {
         )}
 
         <div>
-          <h3 className="font-medium text-slate-50">Trending tools</h3>
+          <h3 className="font-medium text-black">Trending tools</h3>
           <TrendingToolsList />
         </div>
       </div>

@@ -90,8 +90,8 @@ function Profile() {
   return (
     <div className="container-custom-screen h-screen mt-20">
       <div>
-        <h1 className="text-xl text-slate-50 font-semibold">Profile</h1>
-        <p className="mt-1 text-sm text-slate-400">This information will be displayed publicly so be careful what you share.</p>
+        <h1 className="text-xl text-black font-semibold">Profile</h1>
+        <p className="mt-1 text-sm text-black">This information will be displayed publicly so be careful what you share.</p>
       </div>
       <div className="mt-14">
         <UploadAvatar

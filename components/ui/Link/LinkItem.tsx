@@ -12,7 +12,7 @@ export default ({ children, href, className = '', ...props }: Props) => (
   <Link
     {...props}
     href={href}
-    className={mergeTW(`py-2.5 px-4 rounded-lg duration-150 font-medium text-center text-sm text-white bg-slate-800 ${className}`)}
+    className={mergeTW(`py-2.5 px-4 rounded-lg duration-150 font-medium text-center text-sm text-black bg-slate-800 ${className}`)}
   >
     {children}
   </Link>

@@ -56,16 +56,16 @@ export default ({
   return isCommandActive ? (
     <div className="fixed z-30 w-full h-full inset-0 rounded-xl flex items-center justify-center px-4">
       <BlurBackground isActive={true} setActive={setCommandActive} />
-      <div className="flex-1 max-w-xl rounded-xl bg-slate-900 bg-gradient-to-l from-slate-900 to-indigo-800/10 shadow-lg relative z-30">
+      <div className="flex-1 max-w-xl rounded-xl bg-white from-slate-900 to-indigo-800/10 shadow-lg relative z-30">
         <div className="flex gap-x-3 items-center p-5 border-b border-slate-800">
-          <IconSearch className="flex-none text-slate-400" />
+          <IconSearch className="flex-none text-black" />
           <input
             type="text"
             autoFocus
             onChange={e => setSearch(e.target.value)}
             value={searchValue}
             placeholder="Search for tools"
-            className="flex-1 text-slate-400 text-sm outline-none bg-transparent"
+            className="flex-1 text-black text-sm outline-none bg-transparent"
           />
         </div>
         <ul className="py-4 px-2 h-full max-h-[300px] overflow-auto">
@@ -81,7 +81,7 @@ export default ({
             )
           ) : (
             <div>
-              <h3 className="text-sm font-medium text-slate-500 p-3">Current week tools</h3>
+              <h3 className="text-sm font-medium text-black0 p-3">Current week tools</h3>
               <ul className="text-sm">
                 {trendingTools.map((group, idx) =>
                   (group as { products: [] }).products.map((item, idx) => (

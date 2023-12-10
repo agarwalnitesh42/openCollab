@@ -59,12 +59,12 @@ export default async function Tag({
         <a className="text-orange-500 hover:text-orange-400 duration-200" href="/">
           Home
         </a>
-        <ChevronRightIcon className="w-4 h-4 text-slate-500" />
+        <ChevronRightIcon className="w-4 h-4 text-black0" />
         <Link className="text-orange-500 hover:text-orange-400 duration-200" href="/blog/">
           Blog
         </Link>
       </div>
-      <h1 className="text-4xl my-4 font-semibold text-white">Tag: {slug}</h1>
+      <h1 className="text-4xl my-4 font-semibold text-black">Tag: {slug}</h1>
       <ul>
         {posts.map((article: any) => (
           <ArticleCard key={article.id} article={article} />

@@ -92,10 +92,10 @@ export default () => {
         <p>
           <span className="text-2xl font-bold mb-4 text-orange-500">Vote Closing In: </span>
         </p>
-        <div className="text-slate-100 flex gap-1 items-center">
+        <div className="text-black flex gap-1 items-center">
           <RenderCountdown />
         </div>
-        <div className="max-w-lg text-slate-400">
+        <div className="max-w-lg text-black">
           Winners get a free shout-out in our newsletter, social media mentions, a winner's badge and more perks.
           <div className="inline sm:block">
             {' '}

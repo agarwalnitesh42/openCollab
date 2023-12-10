@@ -13,7 +13,7 @@ export const Tabs = ({
   variant?: 'vertical' | 'horizontal';
 }) => {
   return (
-    <div className={mergeTW(`border-b border-slate-800 text-sm text-slate-400 font-medium ${className}`)}>
+    <div className={mergeTW(`border-b border-slate-800 text-sm text-black font-medium ${className}`)}>
       <ul className={mergeTW(`flex items-center gap-x-4 overflow-auto w-full ${ulClassName}`)}>{children}</ul>
     </div>
   );

@@ -1,5 +1,5 @@
 export default () => (
-  <div className="space-y-2 text-center text-sm py-10 text-slate-300">
+  <div className="space-y-2 text-center text-sm py-10 text-black">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
@@ -15,7 +15,7 @@ export default () => (
       />
     </svg>
     <h4 className="font-medium">No results found</h4>
-    <p className="text-slate-400">No products found for this search term.</p>
+    <p className="text-black">No products found for this search term.</p>
     <a href="/" className="inline-block bg-slate-800/70 hover:bg-slate-800 rounded-md px-4 py-2 duration-150">
       Find more tools
     </a>

@@ -22,7 +22,7 @@ export const SearchableDropdown = ({ value, options, placeholder, className, con
     <Select
       {...props}
       className={mergeTW(
-        `text-slate-300 text-sm ${className}`,
+        `text-black text-sm ${className}`,
       )}
       classNamePrefix="react-select"
       options={options}

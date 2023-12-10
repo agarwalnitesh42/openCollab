@@ -89,7 +89,7 @@ export default () => {
                 onChange={e => {
                   setEmail((e.target as HTMLInputElement).value);
                 }}
-                className="w-full mt-2"
+                className="w-full mt-2 bg-white"
               />
               <LabelError className="mt">{emailError}</LabelError>
             </div>
@@ -100,13 +100,13 @@ export default () => {
                 onChange={e => {
                   setPassword((e.target as HTMLInputElement).value);
                 }}
-                className="w-full mt-2"
+                className="w-full mt-2 bg-white"
               />
               <LabelError className="mt">{passwordError}</LabelError>
             </div>
           </form>
         </div>
-        <div className="d-flex my-3">
+        <div className="flex d-flex my-3">
           <div className="flex-grow-1">
             <hr/>
           </div>
@@ -119,9 +119,9 @@ export default () => {
         </div>
         <div className="text-center max-w-xl">
           <div className="space-y-3">
-            <Brand w="180" h="50" className="mx-auto" />
-            <h1 className="text-slate-50 text-2xl font-semibold">Log in to your account</h1>
-            <p className="text-slate-300 whitespace-pre-wrap">
+            <Brand w={180} h={50} className="mx-auto" />
+            <h1 className="text-black text-2xl font-semibold">Log in to your account</h1>
+            <p className="text-black whitespace-pre-wrap">
               We use GitHub, and Google provider to keep it simple and easy for our users to login. Let's explore together, the legit way!
             </p>
           </div>

@@ -4,7 +4,7 @@ import LinkItem from '../Link/LinkItem';
 export default () => {
   return (
     // <div className="bg-orange-600">
-    //   <div className="custom-screen py-3 items-center gap-x-4 justify-between text-white font-medium sm:flex md:px-8">
+    //   <div className="custom-screen py-3 items-center gap-x-4 justify-between text-black font-medium sm:flex md:px-8">
     //     <div className="flex items-center">
     //       <img src="https://user-uploads-unicorn.s3.amazonaws.com/product_hunt_kitty.png" alt="PH kitty" className="w-24" />
     //       <p>Support our project: Float UI on Product Hunt now</p>

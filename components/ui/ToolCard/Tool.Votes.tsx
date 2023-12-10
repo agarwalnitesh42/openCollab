@@ -67,7 +67,7 @@ export default ({
         onClick={toggleVote}
         id="vote-item"
         className={mergeTW(
-          `px-4 py-1 text-center text-slate-400 active:scale-[1.5] duration-200 rounded-md border bg-[linear-gradient(180deg,_#1E293B_0%,_rgba(30,_41,_59,_0.00)_100%)] ${
+          `px-4 py-1 text-center text-black active:scale-[1.5] duration-200 rounded-md border bg-[linear-gradient(180deg,_#fff_0%,_rgba(30,_41,_59,_0.00)_100%)] ${
             isUpvoted ? 'text-orange-600 border-orange-600' : 'border-slate-700 hover:text-orange-300'
           } ${className}`,
         )}
@@ -88,7 +88,7 @@ export default ({
           </LinkItem>
           <Button
             onClick={() => setModalActive(false)}
-            className="flex-1 block w-full text-sm border border-slate-700 bg-transparent hover:bg-slate-900 mt-2 sm:mt-0"
+            className="flex-1 block w-full text-sm border border-slate-700 bg-transparent hover:bg-white mt-2 sm:mt-0"
           >
             Continue
           </Button>

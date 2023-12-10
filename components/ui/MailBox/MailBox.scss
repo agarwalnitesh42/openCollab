@@ -18,20 +18,22 @@ $font-base: 'Open Sans', Arial, sans-serif;
 }
 
 .mailbox-container {
-	border: 0.4px solid #363535;
-    border-radius: 17px;
+	border-radius: 17px;
 }
 
 #sidebar {
-	background: #0f172a;
+	background: #fff;
 	float: left;
 	height: 500px;
 	width: 200px;
 	border-radius: 17px;
 	
+	.sidebar__compose {
+		background-color: black;
+    	padding: 9px;
+		border-top-left-radius: 14px;
+	}
 	.sidebar__inboxes {
-		margin-top: 50px;
-		
 		.item-count {
 			background: #34393d;
 			border-radius: 5px;
@@ -40,11 +42,14 @@ $font-base: 'Open Sans', Arial, sans-serif;
 			margin: -2px -8px;
 		}
 		
+		li {
+			background-color: #323232;
+		}
+
 		li a {
-			color: #f97316;
+			color: #fff;
 			cursor: pointer;
 			display: block;
-			margin-bottom: 10px;
 			padding: 15px;
 			text-decoration: none;
 			transition: background .1s linear;
@@ -56,12 +61,13 @@ $font-base: 'Open Sans', Arial, sans-serif;
 		}
 		
 		.fa {
+			color: #fff;
 			margin-right: 10px;
 		}
 	}
 	
 	.btn.compose {
-		color: #1E293B;
+		color: #fff;
 		padding: 30px 15px;
 		text-align: center;
 		text-decoration: none;

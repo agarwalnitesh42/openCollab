@@ -67,7 +67,7 @@ export const TabsLink = ({ children, hash, href, sectionId, className = '', link
   return (
     <li
       className={`flex-none inline-block py-2 border-b ${
-        isLinkActive ? 'border-slate-600 text-slate-200' : ' border-transparent'
+        isLinkActive ? 'border-slate-600 text-black' : ' border-transparent'
       } ${className}`}
     >
       {variant == 'link' ? (

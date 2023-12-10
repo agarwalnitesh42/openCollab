@@ -36,14 +36,14 @@ export default async function Home() {
   return (
     <section className="max-w-4xl mt-20 mx-auto px-4 md:px-8">
       <div>
-        <h1 className="text-slate-50 text-3xl font-semibold">The upcoming tools</h1>
-        <p className="text-slate-300 mt-3">Browse the upcoming tools, and be in update with the next.</p>
+        <h1 className="text-black text-3xl font-semibold">The upcoming tools</h1>
+        <p className="text-black mt-3">Browse the upcoming tools, and be in update with the next.</p>
       </div>
 
       <div className="mt-10 mb-12">
         {launchWeeks.map(group => (
           <>
-            <div className="mt-3 text-slate-400 text-sm">
+            <div className="mt-3 text-black text-sm">
               {group.startDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
             </div>
             <ul className="mt-3 divide-y divide-slate-800/60">

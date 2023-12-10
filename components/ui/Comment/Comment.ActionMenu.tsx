@@ -19,7 +19,7 @@ export const CommentActionMenu = ({ children }: { children: ReactNode }) => {
       <button
         ref={menuBtnRef}
         onClick={() => setState(!state)}
-        className="py-1 px-0.5 rounded-md text-slate-400 hover:bg-slate-800 active:bg-slate-700 duration-150"
+        className="py-1 px-0.5 rounded-md text-black hover:bg-slate-800 active:bg-slate-700 duration-150"
       >
         <IconEllipsisVertical className="" />
       </button>

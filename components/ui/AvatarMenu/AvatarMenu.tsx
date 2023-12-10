@@ -49,7 +49,7 @@ export default ({ onLogout, session }: Props) => {
           <li key={idx}>
             <LinkItem
               href={item.path}
-              className="block w-full py-2 px-3 font-normal text-slate-300 text-left rounded-none hover:bg-slate-700"
+              className="block w-full py-2 px-3 font-normal text-black text-left rounded-none hover:bg-slate-700"
             >
               {item.title}
             </LinkItem>
@@ -57,7 +57,7 @@ export default ({ onLogout, session }: Props) => {
         ))}
         <Button
           onClick={onLogout}
-          className="block w-full py-2 px-3 font-normal text-slate-300 text-left rounded-none border-t border-slate-700 bg-transparent hover:bg-slate-700"
+          className="block w-full py-2 px-3 font-normal text-black text-left rounded-none border-t border-slate-700 bg-transparent hover:bg-slate-700"
         >
           Logout
         </Button>

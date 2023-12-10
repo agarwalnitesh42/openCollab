@@ -19,10 +19,10 @@ export default () => {
     const [desc, setDesc] = useState('');
 
     return (
-        <div className="flex w-full border rounded-xl border-slate-800 bg-slate-800 p-5 flex-col gap-1 md:gap-2 items-center justify-end">
+        <div className="flex w-full rounded-xl p-5 flex-col gap-1 bg-[#f3f3f3] md:gap-2 items-center justify-end">
             <div className='flex flex-col w-full'>
                 <div className="px-2 flex items-center text-center gap-3">
-                    <p><span className="text-2xl font-bold mb-4 text-orange-500 text-sm">Search Tech you're looking for</span></p>
+                    <p><span className="text-2xl font-bold mb-4 text-black text-sm">Search Tech you're looking for</span></p>
                 </div>
                 <div className="px-2 flex flex-col">       
                     <div className='flex w-full'>
@@ -30,7 +30,7 @@ export default () => {
                             <SearchableDropdown 
                                 options={techTypes} 
                                 placeholder={"Select Tech Type"} 
-                                className={"w-full border-slate-600"}
+                                className={"w-full"}
                                 value={techType}
                                 containerClass={'w-full mr-4'}
                             />
@@ -40,7 +40,7 @@ export default () => {
                             <SearchableDropdown 
                                 options={techTypes} 
                                 placeholder={"Tech in Exchange ( Optional ) "} 
-                                className={"border-slate-600 text-start w-full"}
+                                className={"text-start w-full"}
                                 containerClass={'w-full'}
                                 value={techInExchange}
                             />
@@ -54,13 +54,13 @@ export default () => {
                                 onChange={e => {
                                     setDesc((e.target as HTMLInputElement).value);
                                 }}
-                                className="w-full h-18 border-slate-800 bg-slate-600 text-[#1d1e1f] bg-[#f9fafb] hover:bg-[#f9fafb] focus:bg-[#f9fafb]"
+                                className="w-full h-18 bg-slate-600 text-[#1d1e1f] bg-[#f9fafb] hover:bg-[#f9fafb] focus:bg-[#f9fafb]"
                                 placeholder='Anything else you want to add'
                             />
                         </div>
                     </div>
                     <div className='flex-w-full'>
-                        <Button className='w-full'> Search </Button>
+                        <Button className='text-white w-full'> Search </Button>
                     </div>
                 </div>
             </div>

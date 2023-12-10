@@ -107,7 +107,7 @@ export default ({ comment, productId }: Props) => {
             <CommentUserName>{newComment.profiles.full_name}</CommentUserName>
           </Link>
           {user && user.id == productId ? (
-            <div className="text-xs px-2 py-0.5 rounded-full bg-indigo-400 border-indigo-600 text-white font-medium">Maker</div>
+            <div className="text-xs px-2 py-0.5 rounded-full bg-indigo-400 border-indigo-600 text-black font-medium">Maker</div>
           ) : (
             ''
           )}
@@ -143,7 +143,7 @@ export default ({ comment, productId }: Props) => {
           <li>
             <Button
               onClick={() => setEditorActive(true)}
-              className="block w-full py-1 px-3 font-normal text-xs text-slate-300 text-left rounded-none border-t border-slate-700 bg-transparent hover:bg-slate-700"
+              className="block w-full py-1 px-3 font-normal text-xs text-black text-left rounded-none border-t border-slate-700 bg-transparent hover:bg-slate-700"
             >
               Edit
             </Button>

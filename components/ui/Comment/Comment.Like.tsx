@@ -12,11 +12,11 @@ export const CommentLike = ({ children, className, count = 0, ...props }: Props)
     {...props}
     className={mergeTW(
       `${
-        count > 0 ? 'text-red-500' : 'text-slate-400'
+        count > 0 ? 'text-red-500' : 'text-black'
       } inline-flex items-center gap-x-2 text-xs font-medium p-1.5 px-2 rounded-full bg-slate-800 hover:bg-slate-700/60 active:hover:bg-slate-700 border border-slate-700 duration-150 ${className}`
     )}
   >
     <IconHeart className="w-3 h-3" />
-    {count > 0 ? <span className={count > 0 ? 'text-slate-200' : 'text-slate-400'}>{count}</span> : ''}
+    {count > 0 ? <span className={count > 0 ? 'text-black' : 'text-black'}>{count}</span> : ''}
   </button>
 )

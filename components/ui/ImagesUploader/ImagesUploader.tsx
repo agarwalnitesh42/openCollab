@@ -36,7 +36,7 @@ export const ImagesUploader = ({
           {isLoad ? (
             <IconLoading className="absolute inset-0 m-auto text-orange-500" />
           ) : (
-            <div className="text-sm text-slate-300 space-y-1">
+            <div className="text-sm text-black space-y-1">
               <IconPlus className="mx-auto w-6 h-6" />
               Upload
             </div>

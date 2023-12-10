@@ -26,8 +26,8 @@ export default ({
           {isLoad ? <IconLoading className="absolute inset-0 m-auto text-orange-500" /> : ''}
         </label>
         <div>
-          <p className="text-slate-300">Tool logo</p>
-          <p className="text-sm text-slate-400">Recommended size: 220x220 or 210x210 pixels</p>
+          <p className="text-black">Tool logo</p>
+          <p className="text-sm text-black">Recommended size: 220x220 or 210x210 pixels</p>
         </div>
         <div className="flex items-center gap-x-2">
           <Button

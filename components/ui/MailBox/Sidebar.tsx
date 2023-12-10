@@ -31,9 +31,9 @@ const Sidebar: React.FC<SidebarProps> = ({ emails, setSidebarSection }) => {
 
 	return (
 		<div id="sidebar">
-			<div className="sidebar__compose">
-				<a href="#" className="btn compose">
-					Compose <span className="fa fa-pencil"></span>
+			<div className="sidebar__compose text-black">
+				<a href="#" className="btn compose text-white">
+					Compose <span className="fa fa-pencil text-black"></span>
 				</a>
 			</div>
 			<ul className="sidebar__inboxes">
