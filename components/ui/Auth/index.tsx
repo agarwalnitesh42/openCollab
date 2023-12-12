@@ -17,8 +17,9 @@ import { GithubProvider, GoogleProvider } from '../AuthProviderButtons';
 import ProfileService from '@/utils/supabase/services/profile';
 import { createBrowserClient } from '@/utils/supabase/browser';
 import { useRouter } from 'next/navigation';
+
+// TODO - Email trigger to send emails .. Need to reuse same email mechanism for sending emails in MailBox Feature
 import sendWelcomeEmail from '@/utils/sendWelcomeEmail';
-// Supabase auth needs to be triggered client-side
 
 export default function Auth({ onLogout }: { onLogout?: () => void }) {
   const { supabase, session, user } = useSupabase();
