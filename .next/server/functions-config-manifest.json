@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "functions": {
+    "/api/auth-token": {},
+    "/login": {},
+    "/oss-friends": {},
+    "/the-story": {},
+    "/tool/[slug]": {},
+    "/upcoming": {}
+  }
+}

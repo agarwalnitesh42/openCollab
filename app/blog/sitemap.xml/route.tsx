@@ -26,9 +26,9 @@ async function generateSiteMap() {
     <url>
       <loc>https://opencollab.exchange/blog</loc>
     </url>
-      ${blogSitemap.articles.map((i: SitemapItem) => toSitemapRecord(`/blog/${i.slug}`, i.lastmod))}
-      ${blogSitemap.categories.map((i: SitemapItem) => toSitemapRecord(`/blog/category/${i.slug}`, i.lastmod))}
-      ${blogSitemap.tags.map((i: SitemapItem) => toSitemapRecord(`/blog/tag/${i.slug}`, i.lastmod))}
+      ${blogSitemap?.articles?.map((i: SitemapItem) => toSitemapRecord(`/blog/${i.slug}`, i.lastmod))}
+      ${blogSitemap?.categories?.map((i: SitemapItem) => toSitemapRecord(`/blog/category/${i.slug}`, i.lastmod))}
+      ${blogSitemap?.tags?.map((i: SitemapItem) => toSitemapRecord(`/blog/tag/${i.slug}`, i.lastmod))}
    </urlset>
  `;
 }

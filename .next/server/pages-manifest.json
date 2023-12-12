@@ -1,0 +1,10 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/api/api-formatters": "pages/api/api-formatters.js",
+  "/api/chat-gpt": "pages/api/chat-gpt.js",
+  "/api/past-week-tools": "pages/api/past-week-tools.js",
+  "/api/week-tools": "pages/api/week-tools.js",
+  "/api/auth-token": "pages/api/auth-token.js",
+  "/_document": "pages/_document.js"
+}

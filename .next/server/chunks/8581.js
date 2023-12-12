@@ -1,0 +1,1 @@
+"use strict";exports.id=8581,exports.ids=[8581],exports.modules={18581:(e,t,s)=>{s.r(t),s.d(t,{$$typeof:()=>i,__esModule:()=>d,default:()=>a});var o=s(17536);let r=(0,o.createProxy)(String.raw`C:\Users\USER\Desktop\devhunt\components\ui\ChatWindow\index.tsx`),{__esModule:d,$$typeof:i}=r,u=r.default,a=u}};
